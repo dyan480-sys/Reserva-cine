@@ -1,4 +1,2 @@
-Console.WriteLine("Hello, World!");
-Console.WriteLine("bienvebido al sistema");
-Console.WriteLine("cosa1");
-Console.WriteLine("cosa2");
+Console.WriteLine("Bienvenido a:");
+Console.WriteLine(" Sistema de Reserva de Asientos para Cine ");
