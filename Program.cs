@@ -3,8 +3,6 @@ namespace Cine
 {
     class Program
     {
-        string nombre = "";
-        string codigo = "";
         static void Main()
         {
             string usuario = "admin";
@@ -37,9 +35,11 @@ namespace Cine
 
             while (true)
             {
+                Console.WriteLine("Bienvenido a:");
+                Console.WriteLine("Sistema de Reserva de Asientos para Cine ");
                 Console.WriteLine("ingrese su nombre de usuario: ");
                 usuarioingresado = Console.ReadLine()!;
-                Console.WriteLine("ingrese su contrasena: ");
+                Console.WriteLine("ingrese su contraseña: ");
                 contrasenaingresada = Console.ReadLine()!;
                 if (usuario == usuarioingresado && contrasena == contrasenaingresada)
                 {
@@ -48,15 +48,17 @@ namespace Cine
                 }
                 else
                 {
-                    Console.WriteLine("usuario o contrasena incorrectos, intente de nuevo");
+                    Console.WriteLine("usuario o contraseña incorrectos, intente de nuevo");
                 }
             }
 
             while (opcion != 4)
             {
                 Console.Clear();
-                Console.WriteLine("sistema de reservas cine ");
-                Console.WriteLine("MENU");
+                
+                Console.WriteLine("BIENVENIDO A EL MENÚ PRINCIPAL");
+                Console.WriteLine("Seleccione una de las siguientes opciones que desee realizar:");
+
                 Console.WriteLine("1. ver sala y asientos disponibles");
                 Console.WriteLine("2. reservar asiento");
                 Console.WriteLine("3. salir");
@@ -80,17 +82,20 @@ namespace Cine
                             Console.WriteLine("elige la sala (<1-4>): ");
                             switch (Console.ReadLine())
                             {
-                                case "1":
+                                case "1": 
+                                    Console.Clear();
                                     Console.WriteLine("sala 1 seleccionada");
                                     sala1 = visualsala(sala1);
                                     mostrarestado(sala1, sala1_estado, sala1.GetLength(1));
                                     break;
                                 case "2":
+                                    Console.Clear();
                                     Console.WriteLine("sala 2 seleccionada");
                                     sala2 = visualsala(sala2);
                                     mostrarestado(sala2, sala2_estado, sala2.GetLength(1));
                                     break;
                                 case "3":
+                                    Console.Clear();
                                     Console.WriteLine("sala vip seleccionada");
                                     salavip = visualsala(salavip);
                                     mostrarestado(salavip, salavip_estado, salavip.GetLength(1));
@@ -108,8 +113,11 @@ namespace Cine
                         Console.Clear();
                         while (ss == 0)
                         {   
-                            
+                            Console.WriteLine("precione enter para continuar");
+                            Console.ReadLine();
                             Console.Clear();
+                            Console.WriteLine("Estas en la seccion de reservas");
+
                             Console.WriteLine("salas disponibles:");
                             Console.WriteLine("1. sala 1");
                             Console.WriteLine("2. sala 2");
@@ -119,6 +127,9 @@ namespace Cine
                             switch (Console.ReadLine())
                             {
                                 case "1":
+
+                                    Console.Clear();
+
                                     Console.WriteLine("sala 1 seleccionada");
                                     sala1 = visualsala(sala1);
                                     mostrarestado(sala1, sala1_estado, sala1.GetLength(1));
@@ -129,6 +140,7 @@ namespace Cine
                                     Console.ReadLine();
                                     break;
                                 case "2":
+                                    Console.Clear();
                                     Console.WriteLine("sala 2 seleccionada");
                                     sala2 = visualsala(sala2);
                                     mostrarestado(sala2, sala2_estado, sala2.GetLength(1));
@@ -139,6 +151,7 @@ namespace Cine
                                     Console.ReadLine();
                                     break;
                                 case "3":
+                                    Console.Clear();
                                     Console.WriteLine("sala vip seleccionada");
                                     salavip = visualsala(salavip);
                                     mostrarestado(salavip, salavip_estado, salavip.GetLength(1));
@@ -247,3 +260,4 @@ namespace Cine
         }
     }
 }
+
